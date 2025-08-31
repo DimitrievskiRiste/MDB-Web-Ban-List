@@ -15,6 +15,6 @@ $config['ftp']['ssl_enabled'] = false;
  * MDB Ban System filepath to bans file.
  */
 $config['bans']['filepath'] = 'cstrike/addons/amxmodx/configs/mdbbans/bans.cfg';
-$config['bans']['tempfile'] = 'C:\wamp64\www\WebBanList\src\bans.tmp';
+$config['bans']['tempfile'] = __DIR__."/src/bans.tmp";
 
 

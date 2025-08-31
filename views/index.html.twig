@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+    <title>MDB Web Ban List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="flex w-[100%] flex-col flex-wrap">
+  <table class="border-collapse border border-gray-400 w-[100%]" role="table">
+      <thead>
+      <tr>
+          <th class="p-5 border border-gray-300">Player</th>
+          <th class="p-5 border border-gray-300">mID</th>
+          <th class="p-5 border border-gray-300">SteamID</th>
+      </tr>
+      </thead>
+      <tbody>
+      {% for item in data %}
+      <tr>
+          <td class="border border-gray-300 text-center">{{ item.PlayerName }}</td>
+          <td class="border border-gray-300 text-center">{{ item.PlayerId }}</td>
+          <td class="border border-gray-300 text-center">{{ item.PlayerSteamId }}</td>
+      </tr>
+      {% endfor %}
+      </tbody>
+  </table>
+</body>
+</html>

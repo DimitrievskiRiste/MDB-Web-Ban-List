@@ -1,0 +1,21 @@
+{
+    "name": "riste/webbanlist",
+    "description": "Web ban list for MDB Ban System",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Riste\\Webbanlist\\": "src/",
+            "Riste\\": "/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Riste Dimitrievski",
+            "email": "ristedimitrievski023@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.0"
+    }
+}

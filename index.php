@@ -12,7 +12,12 @@ $ftp = new FTP();
         $twig = new \Twig\Environment($loader, [
             'cache' => __DIR__."/cache",
         ]);
-        if(isset($_COOKIE) && $_COOKIE['v_lr']){
+        if(file_exists($config['bans']['tempfile'])){
+            $unixTime = filemtime($config['bans']['tempfile']);
+            $diff = time() - $unixTime;
+            if($diff >= 600 ) {
+                WebBanList::getBans();
+            }
             PlayerData::readFile();
             $data = PlayerData::getData();
             return print $twig->render("index.html.twig",['data' => $data]);

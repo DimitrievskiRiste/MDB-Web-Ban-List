@@ -9,17 +9,27 @@
   <table class="border-collapse border border-gray-400 w-[100%]" role="table">
       <thead>
       <tr>
+          <th class="p-5 border border-gray-300">Ban date</th>
+          <th class="p-5 border border-gray-300">Ban Type</th>
           <th class="p-5 border border-gray-300">Player</th>
           <th class="p-5 border border-gray-300">mID</th>
           <th class="p-5 border border-gray-300">SteamID</th>
+          <th class="p-5 border border-gray-300">Ban Length</th>
+          <th class="p-5 border border-gray-300">Banned by</th>
+          <th class="p-5 border border-gray-300">Reason</th>
       </tr>
       </thead>
       <tbody>
       {% for item in data %}
       <tr>
+          <td class="border border-gray-300 text-center">{{ item.Date }}</td>
+          <td class="border border-gray-300 text-center">{{ item.BanType }}</td>
           <td class="border border-gray-300 text-center">{{ item.PlayerName }}</td>
           <td class="border border-gray-300 text-center">{{ item.PlayerId }}</td>
           <td class="border border-gray-300 text-center">{{ item.PlayerSteamId }}</td>
+          <td class="border border-gray-300 text-center">{{ item.BanLength }}</td>
+          <td class="border border-gray-300 text-center">{{ item.BannedBy }}</td>
+          <td class="border border-gray-300 text-center">{{ item.reason }}</td>
       </tr>
       {% endfor %}
       </tbody>
